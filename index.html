@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      color: #333333;
+    }
+
+    .container {
+      background-color: #F0F0F0;
+      padding: 20px;
+    }
+
+    .parent {
+      font-weight: bold;
+      border: 1px solid #000;
+      margin-bottom: 20px;
+    }
+
+    .child {
+      color: red;
+      background-color: lightskyblue;
+      padding: 10px;
+    }
+
+    .grandchild {
+      font-style: italic;
+      border: 1px dotted red;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!--div>h1+p-->
+    <div class="parent">
+      <h1>부모 요소</h1>
+      <p>부모 요소의 텍스트입니다.</p>
+    </div>
+
+    <!--div>h2+p+(span>p)-->
+    <div class="child">
+      <h2>자식 요소</h2>
+      <P>자식 요소의 텍스트입니다.</P>
+      <span class="grandchild">
+        <!--p태그와 span태그의 차이점.
+        개발자도구로 보면 p태그는 필요 영역과 상관 없이 한 줄 다 차지(block 요소의 특징)
+        span 태그는 필요한 만큼만 차지(inline 요소의 특징)-->
+        손자 요소의 텍스트입니다.
+      </span>
+    </div>
+  </div>
+</body>
+</html>
