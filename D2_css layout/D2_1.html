@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      margin-bottom: 50px;
+    }
+    /* 마진 상쇄 */
+    p {
+      margin-top: 50px;
+    }
+    /* body 태그 기본 margin: 상하좌우 8px */
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>시작하기</h1>
+  <!--block 스타일 -->
+  <h2>블록 스타일</h2>
+  <div>한 줄을 다 차지한다</div>
+  <p>한 줄을 다 차지한다</p>
+  <!-- 사용자의 입력이 필요할 때 사용 -->
+  <form action="">
+    <label for="user-input">사용자 입력</label>
+    <!-- 실제로 입력하는 영역 -->
+    <input type="text" id="user-input">
+  </form>
+
+  <table>
+    <thead>
+      <!-- tr: 한 줄 -->
+      <tr>
+        <th>이름</th>
+        <th>성별</th>
+        <th>직업</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>금기륜</td>
+        <td>남</td>
+        <td>강사</td>
+      </tr>
+      <tr>
+        <td>허건</td>
+        <td>남</td>
+        <td>프로</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 줄긋기 -->
+  <hr>
+  <!-- 공백 -->
+  <br>
+  <!-- inline 요소들 -->
+  <!-- margin, padding이 좌우에만 적용 -->
+  <!-- width, height 안먹힘 -->
+  <!-- 위와 같은 속성들을 inline에 적용하려면 -->
+  <!-- display: inline-block 을 적용해줘야 한다. -->
+  <span style="padding: 100px;">span 태그</span>
+  <span style="width: 100px; height: 100px;">span 태그2</span>
+  <a href="">a 태그</a>
+  <img src="" alt="이미지">
+  <b>진한 글씨</b>
+  <em>기울인 글씨</em>
+  <small>작은 글씨</small>
+  <input type="text">
+  <input type="checkbox">
+  <input type="number">
+  <textarea name="" id=""></textarea>
+  <select name="" id=""></select>
+  <button>버튼</button>
+
+  <div style="margin-bottom: 500;"></div>
+<div></div>
+</body>
+</html>
+
+<!-- ------------------------------- -->
+ <!-- flex만 제대로 알면 모든 배치 가능 -->

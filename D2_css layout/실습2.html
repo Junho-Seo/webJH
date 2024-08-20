@@ -1,0 +1,39 @@
+<!-- 2613. form, label, input 태그 실습 예제 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 가상 클래스(의사 클래스): css에서 사용자 이벤트와 관련된 클래스 */
+      /* :focus - 사용자가 요소를 선택했을 때 적용 */
+      input:focus {
+        border: 2px solid blue;
+        outline: none;
+      }
+      
+      /* :hover - 사용자가 마우스를 요소 위에 올릴 때 적용 */
+      button:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- placeholder: 도움말 작성해주는 속성 -->
+    <div>
+      <!-- label 태그의 for 속성과 -->
+      <!-- input 태그의 id 속성을 동일하게 맞춰주면 -->
+      <!-- 한 쌍으로 동작한다. -->
+      <label for="user_name">USERNAME:</label>
+      <input id="user_name" type="text" placeholder="아이디 입력" />
+    </div>
+    <div>
+      PWD:
+      <input type="text" />
+      <button>로그인</button>
+    </div>
+  </body>
+</html>

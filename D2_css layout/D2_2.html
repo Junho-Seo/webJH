@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 1500px;
+      }
+
+      .container {
+        position: relative;
+        height: 300px;
+        width: 300px;
+        border: 1px solid black;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+      }
+
+      .static {
+        position: static;
+        background-color: lightcoral;
+      }
+
+      .absolute {
+        position: absolute;
+        background-color: lightgreen;
+        /* 위에서 100 좌에서 100 밀어낸 것 */
+        top: 100px;
+        left: 100px;
+      }
+
+      .relative {
+        position: relative;
+        background-color: lightblue;
+        top: 100px;
+        left: 100px;
+      }
+
+      .fixed {
+        position: fixed;
+        background-color: gray;
+        top: 0;
+        right: 0;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 0;
+        background-color: darkviolet;
+      }
+
+      .top-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        height: 40px;
+        border: 2px solid #000;
+        /* 원은 50% */
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      .top-button:hover {
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- 기본: 우하단 순서로 배치, 가능한 가장 좌상단에 배치. -->
+      <div class="box static">Static</div>
+
+      <!-- relative: 현재 배치되어야 할 좌표에서부터 출발(이동) -->
+      <div class="box relative">Relative</div>
+
+      <!-- absolute: 부모 요소 중 가장 가까운 relative 로 부터 계산 -->
+      <!-- 즉, 많이 쓰면 헷갈린다! 주의! 특수한 경우에 사용 -->
+      <div class="box absolute">Absolute</div>
+
+      <!-- fixed: 화면 기준으로 설정 -->
+      <!-- 스크롤을 내려도, 그 자리에 고정 -->
+      <div class="box fixed">Fixed</div>
+    </div>
+    
+    <!-- sticky: 일반적으로 relative 처럼 동작 -->
+    <!-- 스크롤을 내릴 경우 fixed 처럼 동작 -->
+    <!-- 주의사항: 부모 요소를 넘어갈 수 없다! (이 문서의 container 안에 있으면 작동 안함) -->
+    <div class="box sticky">sticky</div>
+    
+    <button class="top-button">TOP</button>
+  </body>
+</html>

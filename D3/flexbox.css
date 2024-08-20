@@ -1,0 +1,6 @@
+/* 기본 배경만 적용한 상태 */
+.basic-container {
+  margin-bottom: 40px;
+  padding: 10px;
+  background-color: #ccc;
+}
