@@ -1,0 +1,103 @@
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  margin-bottom: -4rem;
+  padding-bottom: 7rem;
+}
+
+/* 나중에 팀에 따라 아래와 같이 긴 이름을 쓰는 경우가 있다 */
+/* 언더바 2개로 이어붙여서(__) 클래스 이름을 구성함 */
+/* .main__section__intro */
+
+.front-page,
+.img-wrap,
+.intro,
+.skills,
+.project,
+.contact {
+  padding-top: 4rem;
+  height: 500px;
+
+  display: flex;
+}
+
+.front-page,
+.skills,
+.contact {
+  background-color: #f0f0f0;
+}
+
+.front-page {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.intro,
+.skills,
+.project,
+.contact {
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-wrap {
+  padding-left: 0;
+  padding-right: 0;
+  background-image: url(./test_profile.png);
+  background-repeat: no-repeat;
+  background-size: auto 90%;
+  background-position: bottom;
+}
+
+
+/* 미디어 쿼리 */
+
+/* CSS에서 반응형을 구현할 수 있는 기능 */
+/* @: At-rule (mdn 문서 찾아보기) */
+/* 구글에 "CSS At-rule MDN" */
+/* min-width: 최소 범위를 지정 */
+/* max-width: 최대 범위를 지정 */
+
+@media screen and (max-width: 500px) {
+  .intro {
+    background-color: red;
+  }
+}
+
+.top-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.top-button a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.footer {
+  height: 4rem;
+  background-color: #f0f0f0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

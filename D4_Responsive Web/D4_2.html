@@ -1,4 +1,4 @@
-<!-- 음악 스트리밍 실습 1+2, 4약간 -->
+<!-- 음악 스트리밍 실습 1+2+3 -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -39,17 +39,18 @@
         background-color: black;
         color: white;
 
+        /* position: fixed; */
+        /* bottom: 0; */
         /* 실제로 footer에는 잘 쓰이지 않는다 */
-        /* 이렇게하면 계속 따라다님 */
+        /* 이렇게하면 화면을 계속 따라다님(fixed) */
         /* 사용자 기준에서 계속 볼 필요가 없는 내용 */
-        /* position: fixed;
-      bottom: 0; */
 
-        /* 그래서 위의 내용 영역들을 꽉 차도록 만든다(#wrapper, body height) */
+        /* 그래서 메인 내용 영역을 꽉 차도록 만든다(#wrapper, html, body) */
 
         display: flex;
         justify-content: center;
         align-items: center;
+        /* 딸깍 3줄 중앙정렬 (가장 쉬움) */
       }
     </style>
   </head>
@@ -57,7 +58,7 @@
     <div id="wrapper">
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <!-- container: 좌우에 여백을 주는 class -->
-        <!-- 이름 지을때 겹치지 않게 container는 피하기 -->
+        <!-- 이름 지을때 겹치지 않게 "container"는 피하기 -->
         <div class="container container-fluid">
           <a class="navbar-brand" href="#">음악 스트리밍 사이트</a>
           <button
@@ -75,7 +76,8 @@
             <!-- me-auto 좌측정렬 ms-auto 우측정렬 mx-auto 중앙정렬 -->
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <!-- text-nowrap: 글씨 배치 관련 -->
+                <!-- (bootstrap) text-nowrap: 글씨 wrap을 해제해서 작은 화면에서 각 글자가 개행되지 않고 정상 출력되도록 한다.  -->
+                <!-- 한글만. 영어는 안 해도 정상출력됨 -->
                 <a class="nav-link text-nowrap" href="#"
                   ><i class="fa-solid fa-house"></i
                 ></a>
@@ -189,6 +191,8 @@
         </main>
       </div>
     </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- footer -->
     <footer class="footer border-2 border-top">
       <span>&copy; 2024 음악 스트리밍 서비스</span>
